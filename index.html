@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <title>SUCデイズ ホームページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #0077aa;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #0077aa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .slideshow-container {
+      max-width: 800px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>SUCデイズ ホームページ</h1>
+
+  <div class="slideshow-container">
+    <div class="slide"><img src="slide1.jpg" alt="スライド1"></div>
+    <div class="slide"><img src="slide2.jpg" alt="スライド2"></div>
+    <div class="slide"><img src="slide3.jpg" alt="スライド3"></div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+  </script>
+
+  <p>ようこそ！SUCデイズでは、子どもたちの学びや遊びを支援しています。</p>
+
+  <h2>メニュー</h2>
+  <ul>
+    <li><a href="blog.html">▶ ブログページへ</a></li>
+    <li><a href="admin-login.html">▶ 管理者ログインへ</a></li>
+  </ul>
+
+  <h2>最新情報</h2>
+  <ul>
+    <li>2025年6月：マインクラフト建築イベントを開催しました！</li>
+    <li>「すらら」学習支援を強化中です。</li>
+  </ul>
+
+  <h2>リンク</h2>
+  <ul>
+    <li><a href="#">▶ アクセス</a></li>
+    <li><a href="#">▶ お問い合わせ</a></li>
+    <li><a href="#">▶ SUCグループ公式</a></li>
+    <li><a href="#">▶ Twitter（X）</a>｜<a href="#">Instagram</a></li>
+  </ul>
+</body>
+</html>
